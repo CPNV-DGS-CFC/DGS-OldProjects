@@ -1,0 +1,171 @@
+// Auteur : David Varoso Gomes
+// Date : 20.02.2019
+// Version : 1.1
+// But : Créer une jeu Bataille Navale
+
+// Libraries
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include "Tableau.h"
+#pragma execution_character_set ("utf-8")
+
+int choixcouleur; // Variable pour le choix de la couleur du programe dans l'option 2 du menu
+
+void menu(){
+
+    unsigned int choix = 0;
+
+    while (choix != 1 && choix != 4) //Boucle pour afficher le menu tant que l'utilisateur n'a pas appuiyer sur jouer ou quitter
+    {
+        // Choix de l'utilisateur
+        printf("--------------------------------------------------------\n"
+               "--------------------------------------------------------\n"
+               "  ____        _   _   _           _     _       \n"
+               " |  _ \\      | | | | | |         | |   (_)      \n"
+               " | |_) | __ _| |_| |_| | ___  ___| |__  _ _ __  \n"
+               " |  _ < / _` | __| __| |/ _ \\/ __| '_ \\| | '_ \\ \n"
+               " | |_) | (_| | |_| |_| |  __/\\__ \\ | | | | |_) |\n"
+               " |____/ \\__,_|\\__|\\__|_|\\___||___/_| |_|_| .__/ \n"
+               "                                         | |    \n"
+               "                                         |_|    \n"
+               "--------------------------------------------------------\n"
+               "--------------------------------------------------------\n\n\n");
+
+        printf("--    .-\"\"-.     1 - Jouer\n"
+               "   ) (     )     2 - Options\n"
+               "  (   )   (      3 - Règles du jeu\n"
+               "     /     )     4 - Quitter\n"
+               "    (_    _)                     0_,-.__\n"
+               "      (_  )_                     |_.-._/\n"
+               "       (    )                    |_--..\\\n"
+               "        (__)                     |__--_/\n"
+               "     |''   ``\\                   |\n"
+               "     |        \\                  |      / .\n"
+               "     |         \\  ,,,---=====`\\  |  ,==='\n"
+               "   ___,,,,,---==\"\"\\        | ] \\ | ;|\\ |>\n"
+               "           _   _   \\   ___,| ,,---==\"\"\"\"---,\n"
+               "    o  O  (_) (_)   \\ /          _         /\n"
+               "                     /         _(+)_     /\n"
+               "      \\@_,,,,,,---==\"   \\      \\\\|//    /\n"
+               "--''''\"                         ===   /\n"
+               "                                    //  Quel est votre choix ?\n"
+               "                                    ,'__________________________\n"
+               "   \\    \\    \\     \\               ,/~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+               "                         _____    ,'  ~~~   .-\"\"-.~~~~~~  .-\"\"-.\n"
+               "      .-\"\"-.           ///==---   /`-._ ..-'      -.__..-'\n"
+               "            `-.__..-' =====\\\\\\\\\\\\ V/  .---\\.\n"
+               "                      ~~~~~~~~~~~~, _',--/_.\\  .-\"\"-.\n"
+               "                            .-\"\"-.___` --  \\|         -.__..-\n\n");
+
+        scanf("%d", &choix);
+
+        // Menu de base
+        // Les action qui suiveront le choix de l'utilisateur
+
+
+        switch (choix) {
+
+            {
+                case 1:
+                //Cas 1 : Jouer
+                printf("-----------------------------\n       Bataille navale\n-----------------------------\n\n\n");
+                printf("Le plateu de jeu ce présente comme ceci : \n\n");
+                printf("     1    2    3    4    5    6    7    8    9\n"
+                       "1    -    -    -    -    -    -    -    -    -\n"
+                       "2    -    -    -    -    -    -    -    -    -\n"
+                       "3    -    -    -    -    -    -    -    -    -\n"
+                       "4    -    -    -    -    -    -    -    -    -\n"
+                       "5    -    -    -    -    -    -    -    -    -\n"
+                       "6    -    -    -    -    -    -    -    -    -\n"
+                       "7    -    -    -    -    -    -    -    -    -\n"
+                       "8    -    -    -    -    -    -    -    -    -\n"
+                       "9    -    -    -    -    -    -    -    -    -");
+
+                affichageGrille();
+
+
+
+                break;
+            }
+            {
+                case 2:
+                    // Cas 2 : Option
+
+                    system("cls");
+                    printf("Choisisez une couleur pour votre programme !\n");
+                    printf("1 - Bleu Foncé & Fond Noir\n2 - Bleu Clair Fond Noir\n3 - Bleu Clair & Fond Bleu\n\n\nQuel est votre choix ?\n");
+                    printf("Vous pouvez revenir sur votre choix si la couleur ne vous plait pas a partir du menu.\n");
+                    scanf("%d",&choixcouleur);
+                    system("cls");
+
+                    if(choixcouleur==1){
+                        system("color 9");
+                    }
+
+                    if(choixcouleur==2){
+                        system("color b");
+                    }
+
+                    if(choixcouleur==3){
+                        system("color 3b");
+                    }
+
+                break;
+            }
+            {
+                case 3:
+                // Cas 3 : Règles du jeu
+                system("cls");
+                printf("Voici les règles:\n\nIl s'aggit d'un jeu de bataille navale, vous devez couler tout les bataux de votre adversaire aussi vite que possible ou vous risquez d'avoir les poissons comme voisins !\n\n");
+                printf("Comme dans tout jeu il y a également un score, il augemente de 15 si vous touchez un bateau mais en cas de tir dans l'eau il descend de 5\n\n");
+                printf("Il a differents types de bateaux plus ou moins grands : \n => Les torpieurs ( 2 cases ) \n => Les sous-marins ( 3 cases ) \n => Les contre-torpieurs ( 3 cases ) \n => Les croiseurs ( 4 cases ) \n => Les porte-avions ( 5 cases ) \n");
+                printf("Il n'y qu'un bateau de chaque type, retenez bien ceux que vous coulez !\n\n");
+                system("pause");
+                system("cls");
+                break;
+            }
+            {
+                default:
+                // Cas 4 : Quitter
+                system("cls");
+                printf("Merci d'avoir joué a ce jeu ! \n");
+                system("pause");
+                break;
+            }
+        }
+    }
+}
+
+
+
+
+char playername[15];
+
+int main() {
+    SetConsoleOutputCP(65001);  //Cette liste permet d'afficher des accents
+
+    printf("Bienvenu dans la bataille navalle !\n");
+    printf("Comment vous appelez-vous capitaine ?\n");
+    scanf("%s", playername);
+    printf("Bienvenu %s !\n", playername);
+
+    // Condition pour savoir si il a déjà une fichier Score.txt
+    if (txtscore == NULL) {
+        txtscore = fopen("Score.txt", "a");//Création du fichier si c'est le cas
+        fprintf(txtscore,"-------------------------------------\n");
+        fprintf(txtscore, "Pseudo du joueur : %s\n\n",playername);
+
+    }
+
+
+    printf("Que vouleuz-vous faire ?\n");
+
+    menu();
+
+    fclose(txtscore);
+
+
+
+    return 0;
+}

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/David-Manuel.VAROSO/Documents/GitHub/ICT-431-David-Gomes/Code - Bataille Navale/Tableau.h
+stdlib.h
+-
+stdio.h
+-
+windows.h
+-
+
+C:/Users/David-Manuel.VAROSO/Documents/GitHub/ICT-431-David-Gomes/Code - Bataille Navale/main.c
+stdio.h
+-
+stdlib.h
+-
+windows.h
+-
+Tableau.h
+C:/Users/David-Manuel.VAROSO/Documents/GitHub/ICT-431-David-Gomes/Code - Bataille Navale/Tableau.h
+
