@@ -1,0 +1,37 @@
+<!--Auteur: David Gomes -->
+<!--Titre: Examen ICT-105 -->
+<!--date: 15.11.2019-->
+<!--Version:1.0-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Scripts et libraries -->
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+
+</head>
+
+<body>
+    <!-- Début du form pour le nom - prénom -->
+    <!-- Titre -->
+    <h2>Inscription au tchoukball club Ste-Croix</h2>
+    <!-- Formulaire -->
+    <form method="post" name="tonformulaire" action="motivation.html">
+        <label>Prénom     </label><input  type="text" name="txtFirstName" onclick="Rouge()"><div hidden id="InvalideCourt">Invalide: trop court</div><br>
+        <label>Nom     </label><input type="text" name="txtLastName" onclick="Rouge1()"><div hidden id="InvalideCourt2">Invalide: trop court</div><br>
+        <label>Mot de passe     </label><input type="password" onclick="Rouge2()"><div hidden id="InvalideMin6">Invalide: minimum 6 caractères</div><br>
+        <label>Confirmation    </label><input type="password" onclick="Rouge3()"><div hidden id="InvalideDiff">Invalide: différent</div><br>
+        <input type="submit" onClick='SaveForm()' name='envoi'>
+    </form>
+
+
+</body>
+</html>
+
+
+

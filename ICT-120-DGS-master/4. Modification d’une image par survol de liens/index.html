@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4. Modification d’une image par survol de liens</title>
+
+    <style>
+        div{
+            font-size:25px;
+        }
+
+        img {
+            width: 1000px;
+            height: 600px;
+        }
+
+    </style>
+</head>
+<body>
+
+<a href="#" onmouseover="document.getElementById('images').src='images/avion.jpg'">Avion</a><br>
+<a href="#" onmouseover="document.getElementById('images').src='images/drouge.jpg'">Dé Rouge</a><br>
+<a href="#" onmouseover="document.getElementById('images').src='images/viking.jpg'">Viking</a><br>
+<a href="#" onmouseover="document.getElementById('images').src='images/chinois.jpg'">Chinois</a><br>
+<a href="#" onmouseover="document.getElementById('images').src='images/pasbeau.jpg'">Pas Beau</a><br>
+
+<img id="images">
+
+</body>
+</html>
+
+
+
+
+<!--
+<div id="avion">Avion</div>
+<div id="de_rouge">Dé Rouge</div>
+<img id="imgavion">
+<img id="imgde_rouge">
+
+<script>
+    // Mouse over pour l'avion
+    document.getElementById("avion").addEventListener("mouseover", mouseOverAvion);
+    document.getElementById("avion").addEventListener("mouseout", mouseOutAvion);
+    // Mouse over pour le dé
+    document.getElementById("de_rouge").addEventListener("mouseover", mouseOverDe_Rouge);
+    document.getElementById("de_rouge").addEventListener("mouseover", mouseOutDe_Rouge);
+
+
+    // fonction mouse over avion
+    function mouseOverAvion() {
+        // document.getElementById("demo").style.color = "red";
+        document.getElementById("imgavion").src='airfrance_4.jpg';
+    }
+    function mouseOutAvion() {
+        // document.getElementById("demo").style.color = "black";
+        document.getElementById("imgavion").src='';
+    }
+
+
+    // fonction mouse over avion
+    function mouseOverDe_Rouge() {
+        // document.getElementById("demo").style.color = "red";
+        document.getElementById("imgde_rouge").src='drx.jpg';
+    }
+    function mouseOutDe_Rouge() {
+        // document.getElementById("demo").style.color = "black";
+        document.getElementById("imgde_rouge").src='';
+    }
+
+</script>
+-->

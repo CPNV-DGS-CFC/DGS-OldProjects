@@ -1,0 +1,96 @@
+<!--Auteur: David Gomes -->
+<!--Titre: Site Voyage d'études-->
+<!--Date: 08.11.2019-->
+<!--Version:1.0-->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Site ICT-120</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/activitées.css">
+    <script src="../js/activitées.js"></script>
+
+
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <h1 class="TitleVoyage">Voyage d'études 2020</h1>
+    <p class="TitleVoyage">SI-C1B</p>
+</div>
+
+<!-- Website Menu -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="activitées.html">Activités</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Liste des présences</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--block with all the activitiées -->
+
+<div id="ToutActiv" class="row">
+    <div class="col-md-12">
+        <h3 id="titleActivitees"><strong>Activitées</strong></h3>
+
+
+        <div id="activités">
+            <div class="table-responsive">
+                <table id="myTable">
+                    <!-- Base line -->
+                    <tr>
+                        <td>Nom de l'activité<input type="text" value="" id="index0"></td>
+                        <td>Type<select id="index1">
+                            <option>Culture</option>
+                            <option>Loisir</option>
+                            <option>Repas en commun</option>
+                            <option>Sport</option>
+                        </select>
+                        </td>
+                        <td>Adresse<input type="text" value="" id="index2"></td>
+                        <td>Date/Heure activité<input type="date" value="" id="index3"></td>
+                        <td>Prix<input type="number" value="" id="index4"></td>
+                        <td>Liens utiles<input type="url" value="" id="index5"></td>
+                        <td>Lieu et heure de rdv<input type="text" value="" id="index6"></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 3 Bouttons with JavaScript functions -->
+        <div id="boutton">
+            <button type="button" class="btn btn-primary btn-sm" id="btnAjouter" onclick="Add()"> Ajouter
+            </button>
+            <button type="button" class="btn btn-primary btn-sm" id="btnModifier"> Modifier
+            </button>
+            <button type="button" class="btn btn-primary btn-sm" id="btnSupprimer" onclick="Delete()"> Supprimer
+            </button>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

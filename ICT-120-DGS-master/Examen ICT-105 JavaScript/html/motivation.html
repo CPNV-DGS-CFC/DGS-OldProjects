@@ -1,0 +1,31 @@
+<!--Auteur: David Gomes -->
+<!--Titre: Examen ICT-105 -->
+<!--date: 15.11.2019-->
+<!--Version:1.0-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Scripts et libraries -->
+    <meta charset="UTF-8">
+    <title>Motivation</title>
+    <script src="motivation.js"></script>
+
+</head>
+<body>
+<div class="container-fluid flex-column">
+    <!-- Titre -->
+    <h2>Bonjour <span> (prénom)</span> <span id="LastName2">(nom)</span> </h2>
+    <!-- Formulaire -->
+    <form name="MyForm" action="thankyou.html">
+        <label>Veuillez décrire ci-dessous votre motivation à nous rejoindre, en au minimum 30 caractères et au maximum 144</label><br>
+        <label for="zonetexte"><textarea name="zonetexte" rows="3" cols="60" onclick="longueurCaracteres();" id="zonetexte"></textarea></label>
+        <div>Cette description est trop courte</div>
+        <div>Il vous reste <input type="text" name="NbCaractere">caractères</div>
+        <input type="submit" value="Ok">
+    </form>
+
+</div>
+</body>
+<script>alert(window.location.search)</script>
+</html>

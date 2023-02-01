@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5. Modification d’une image par liste déroulante</title>
+</head>
+<body onchange="listeDeroulante()">
+
+<img id="images"><br>
+
+<FORM>
+    <SELECT onchange="listeDeroulante()" id="liste">
+        <OPTION value="1">Avion</OPTION>
+        <OPTION value="2">Araignée</OPTION>
+        <OPTION value="3">Scarabée</OPTION>
+        <OPTION value="4">Bille verte</OPTION>
+        <OPTION value="5">Dé rouge</OPTION>
+        <option value="6">Mouche</option>
+        <option value="7">Voiture</option>
+    </SELECT>
+</FORM>
+
+
+</body>
+
+<script>
+
+
+    function listeDeroulante() {
+        x = document.getElementById("liste");
+        y = document.getElementById("images");
+
+        selectindex = x.value;
+        y.src = "images/selec0" + selectindex + ".jpg";
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+</html>

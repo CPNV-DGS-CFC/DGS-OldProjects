@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3. Ecriture d’un champ texte</title>
+</head>
+<body>
+<label>
+    <input id="txt1" type="text" name="yes" value="" />
+    <input id="dylan" type="button" name="dydy" onclick="transfert(); return false" value="Envoi" />
+    <input id="txt2" type="text" name="yees" value="" />
+</label>
+
+
+
+</body>
+
+
+<script>
+
+
+    function transfert() {
+        if (txt1.value == "") {
+            alert("Ecrit idiot !");
+        }
+        else{
+            txt2.value = txt1.value;
+            txt1.value = "";
+        }
+
+    }
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<FORM>
+
+    Min<SELECT id="Min">
+
+</SELECT>
+
+    Max<SELECT id="Max">
+
+</SELECT>
+
+    <input id="button" type="button" value="GO" onclick="TestParseInt()">
+
+</FORM>
+
+<p id="ZoneText"></p>
+
+
+</body>
+
+<script>
+
+
+    //creation d'un tableau
+    var UnADix = new Array();
+
+
+    //list1 est egale au option de de min
+    var list1 = document.getElementById("Min");
+
+    //Inutile c'est juste un test
+    var list4 = document.getElementById("list3");
+
+    //pour le Min
+    for (i = 1; i < 11; i++) {
+
+        //newoption va créer une option a min
+        var newoptionUnADix = document.createElement("option");
+
+        UnADix[i] = i;
+        newoptionUnADix.textContent = UnADix[i];
+
+        //affect la valeur de de newoption a list1 qui lui va ajouter les valeur du select min
+        list1.appendChild(newoptionUnADix);
+    }
+
+
+    //fin du min
+
+    ////////////////////////////////////////////////////////////////////////////////////
+
+
+    //pour le max
+
+    //creation d'un tableau
+    var DixACentMoinUn = new Array();
+
+
+    //list1 est egale au option de de min
+    var list2 = document.getElementById("Max");
+
+    //pour le Min
+    for (i = 11; i < 100; i++) {
+
+        //newoption va créer une option a min
+        var newoptionDixACentMoinUn = document.createElement("option");
+
+        DixACentMoinUn[i] = i;
+        newoptionDixACentMoinUn.textContent = DixACentMoinUn[i];
+
+        //affect la valeur de de newoption a list1 qui lui va ajouter les valeur du select min
+        list2.appendChild(newoptionDixACentMoinUn);
+    }
+    //fin du max
+
+    ////////////////////////////////////////////////////////////////////////////////////
+
+
+    function TestParseInt() {
+
+        var TableauNbr = new Array();
+        var NbrMin = document.getElementById("Min").selectedIndex;
+        var NbrMax = document.getElementById("Max").selectedIndex;
+        var NbrMinAffichage=NbrMin;
+        var NbrMaxAffichage=NbrMax+10;
+
+        for (NbrMinAffichage; NbrMinAffichage <= NbrMaxAffichage; NbrMinAffichage++) {
+
+            console.log(NbrMinAffichage);//permet de voir l'avancement de la valeur de "NbrMinAffichage"
+
+            TableauNbr[NbrMinAffichage] = NbrMinAffichage + 1;
+
+            if(NbrMinAffichage<NbrMaxAffichage){
+                document.getElementById("ZoneText").textContent+= TableauNbr[NbrMinAffichage] + ", ";
+            }
+            else
+
+            if(NbrMinAffichage===NbrMaxAffichage)
+            {
+                document.getElementById("ZoneText").textContent += TableauNbr[NbrMaxAffichage];
+            }
+
+        }
+
+
+    }
+
+
+</script>
+</html>
+

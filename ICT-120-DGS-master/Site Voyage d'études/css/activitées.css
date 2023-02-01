@@ -1,0 +1,69 @@
+/*  Auteur: David Gomes
+    Titre: Site Voyage d'études
+    Date: 08.11.2019
+    Version:1.0
+*/
+
+.jumbotron {
+    height: 150px;
+    background: url("https://wallpapercave.com/wp/wp2003933.jpg");
+}
+
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+body {
+    background: -webkit-linear-gradient(right, #808080, #808080);
+    background: -moz-linear-gradient(right, #808080, #808080);
+    background: -o-linear-gradient(right, #808080, #808080);
+    background: linear-gradient(to left, #808080, #808080);
+    font-family: "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#titleActivitees {
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    padding: 2px;
+    text-align: center;
+    margin: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+
+}
+
+
+#activités {
+    border: black solid 3px;
+    padding: 2px;
+    text-align: center;
+    margin: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+}
+
+#boutton {
+    padding: 2px;
+    margin: 25px;
+}
+
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+
+.TitleVoyage {
+    color: white;
+}

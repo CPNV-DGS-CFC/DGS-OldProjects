@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Premiers pas en js</title>
+    <style>
+        div {
+            padding : 5px;
+            margin: 5px;
+            border: solid 1px black;
+            width: fit-content;
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="Blue_OnClick" onclick="Blue_OnClick()">Cette div doit avoir un fond bleu après qu'on lui aie cliqué dessus</div>
+<div id="Strike_OnClick" onclick="Strike_OnClick()">Cette div avoir son texte 'tracé' après qu'on lui aie cliqué dessus</div>
+<div id="Arial_Hover" onmouseover="Arial_Hover()">Ce texte doit être en police Arial quand la souris le survole</div>
+<div id="Double_ChkBox_Green" >
+    Cette div doit dire 'YES' en blanc sur fond vert quand les deux checkboxes dessous sont cochées.<br>
+    A ce moment les checkboxes doivent disparaître<br>
+    <input id="checkbox1" type="checkbox" onclick="Double_ChkBox_Green()"></input><input onclick="Double_ChkBox_Green()" id="checkbox2" type="checkbox"></input>
+</div>
+
+<div id="Div_Pour_Delete" onclick="Div_Pour_Delete()">
+    Quand on clique sur ce texte, ça détruit
+    <div id="Div_A_Delete">cette div</div>
+</div>
+
+</body>
+
+<script>
+
+    function Blue_OnClick() {
+        //document.getElementById("Blue_OnClick").style.backgroundColor = "red";
+
+        if (document.getElementById("Blue_OnClick").style.backgroundColor == "lightblue")
+        {
+            document.getElementById("Blue_OnClick").style.backgroundColor = "white";
+        }
+        else
+            document.getElementById("Blue_OnClick").style.backgroundColor = "lightblue";
+
+
+    }
+
+    function Strike_OnClick(){
+        // document.getElementById("Strike_OnClick").style.textDecoration = "line-through";
+
+        if (document.getElementById("Strike_OnClick").style.textDecoration == "line-through")
+        {
+            document.getElementById("Strike_OnClick").style.textDecoration = "";
+        }
+        else
+            document.getElementById("Strike_OnClick").style.textDecoration = "line-through";
+
+    }
+
+    function Arial_Hover(){
+        // document.getElementById("Arial_Hover").style.fontFamily = "Arial";
+
+        if (document.getElementById("Arial_Hover").style.fontFamily == "Arial")
+        {
+            document.getElementById("Arial_Hover").style.fontFamily = "Times New Roman";
+        }
+        else
+            document.getElementById("Arial_Hover").style.fontFamily = "Arial";
+
+    }
+
+    function Double_ChkBox_Green(){
+
+        if (document.getElementById("checkbox1").checked == true && document.getElementById("checkbox2").checked == true)
+        {
+            document.getElementById("Double_ChkBox_Green").textContent = "YES";
+            document.getElementById("Double_ChkBox_Green").style.backgroundColor = "green";
+        }
+
+    }
+
+    function Div_Pour_Delete(){
+        if (document.getElementById("Div_A_Delete").style.display == "none")
+        {
+            document.getElementById("Div_A_Delete").style.display = "";
+        }
+        else
+            document.getElementById("Div_A_Delete").style.display="none";
+    }
+
+</script>
+
+
+</html>
